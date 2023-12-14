@@ -1,4 +1,3 @@
-// Function to update cat image and display information based on selection
 function updateCatInfo() {
     const catSelector = document.getElementById('catSelector');
     const catImage = document.getElementById('catImage');
@@ -7,7 +6,6 @@ function updateCatInfo() {
   
     const selectedCat = catSelector.value;
   
-    // Clear previous information
     while (catInfo.firstChild) {
       catInfo.removeChild(catInfo.firstChild);
     }
@@ -15,7 +13,6 @@ function updateCatInfo() {
       commentList.removeChild(commentList.firstChild);
     }
   
-    // Display information based on selected cat
     if (selectedCat === 'white') {
         const informationElement = document.createElement('div');
         informationElement.innerHTML = `
@@ -26,10 +23,8 @@ function updateCatInfo() {
         `;
         catInfo.appendChild(informationElement);
     
-        // Display the external image for the white cat
         catImage.style.backgroundImage = "url('https://www.thesprucepets.com/thmb/5GfeWNbr0fUpSxpb7gUgMMb-bVY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/33131301_395369060960674_7259150430012178432_n-5b17d7eafa6bcc0036b523f2.jpg')";
     
-        // Alert for white cat lovers
         alert("Here is a white cat lover!");
       } else if (selectedCat === 'orange') {
         const informationElement = document.createElement('div');
@@ -40,10 +35,8 @@ function updateCatInfo() {
         `;
         catInfo.appendChild(informationElement);
     
-        // Display the external image for the orange cat
         catImage.style.backgroundImage = "url('https://as1.ftcdn.net/v2/jpg/01/63/11/70/1000_F_163117064_syJkTuCddASYjvl4WqyRmnuy8cDXpoQY.jpg')";
         
-        // Alert for orange cat lovers
         alert("Here is an orange cat lover!");
       } else if (selectedCat === 'black') {
         const informationElement = document.createElement('div');
@@ -55,15 +48,12 @@ function updateCatInfo() {
         `;
         catInfo.appendChild(informationElement);
     
-        // Display the external image for the black cat
         catImage.style.backgroundImage = "url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/lucky-black-cat-square-lynne-iddon.jpg')";
     
-        // Alert for black cat lovers
         alert("Here is a black cat lover!");
       }
     }
   
-  // Function to submit and display comments
   function submitComment() {
     const commentInput = document.getElementById('commentInput');
     const commentList = document.getElementById('commentList');
@@ -77,14 +67,11 @@ function updateCatInfo() {
     }
   }
   
-  // Initialize the cat-themed playground
   document.addEventListener('DOMContentLoaded', () => {
     const catSelector = document.getElementById('catSelector');
   
-    // Add change event listener to update cat image and display information
     catSelector.addEventListener('change', updateCatInfo);
   
-    // Trigger the initial update when the page loads
     updateCatInfo();
   });
   

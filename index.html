@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Enchantment Playground</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="options">
+      <label for="catSelector">Choose your cat:</label>
+      <select id="catSelector">
+        <option value="white">White Cat</option>
+        <option value="orange">Orange Cat</option>
+        <option value="black">Black Cat</option>
+      </select>
+      <div class="catImage" id="catImage"></div>
+      <div class="catInfo" id="catInfo"></div>
+    </div>
+    <div class="comments">
+      <label for="commentInput">Leave a magical comment:</label>
+      <input type="text" id="commentInput" placeholder="Type here...">
+      <button onclick="submitComment()">Submit</button>
+      <div class="commentList" id="commentList"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
